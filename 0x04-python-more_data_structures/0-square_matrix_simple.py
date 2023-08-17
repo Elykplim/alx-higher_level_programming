@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    '''
-        A function that traverse through a list for an element that matches
-        search and modify it with replace then returns a new list.
-        @elem: Elements
-    '''
-    if len(my_list) == 0:
-        return my_list
+def square_matrix_simple(matrix=[]):
+    new_matrix = []
+    for row in matrix:
+        new_row = [x ** 2 for x in row]
+        new_matrix.append(new_row)
+    return new_matrix
 
-    new_lst = [elem if elem != search else replace for elem in my_list]
-    return new_lst
