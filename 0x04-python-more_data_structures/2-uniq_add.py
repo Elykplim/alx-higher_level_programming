@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-def uniq_add(my_list=[]):
-    unique_sum = 0
-    seen = set()
+def uniq_add(new_list=[]):
+    unique_items = set(new_list)
+    result_sum = 0
 
-    for num in my_list:
-        if num not in seen:
-            unique_sum += num
-            seen.add(num)
+    for item in unique_items:
+        result_sum += item
 
-    return unique_sum
-
-
+    return result_sum
