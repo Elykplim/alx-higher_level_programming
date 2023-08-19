@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    keys_ordered = list(a_dictionary.keys())
-    keys_ordered.sort()
-    for key in keys_ordered:
-        print("{}: {}".format(key, a_dictionary.get(key)))
+    if a_dictionary is None:
+        return
+    
+    sorted_keys = sorted(a_dictionary.keys())
+    
+    for key in sorted_keys:
+        print("{}: {}".format(key, a_dictionary[key]))
 
