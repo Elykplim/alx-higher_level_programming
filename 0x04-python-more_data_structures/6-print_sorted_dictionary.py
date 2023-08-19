@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    if a_dictionary is None:
+    if not isinstance(a_dictionary, dict):
         return
     
     sorted_keys = sorted(a_dictionary.keys())
